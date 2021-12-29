@@ -1,0 +1,67 @@
+<resources>
+    <string name="app_name">Foodle</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="floatingbutton">floatingButton</string>
+    <string name="favorites">Favorites</string>
+    <string name="search">Search</string>
+    <string name="location">Location</string>
+    <string name="button">button</string>
+    <string name="floating_button">floating button</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="nearby">Nearby</string>
+    <string name="title">Title</string>
+    <string name="category">Category</string>
+    <string name="type">Type</string>
+    <string name="ingredients">Ingredients</string>
+    <string name="cooking_time">Cooking Time</string>
+    <string name="add_dish">Add Dish</string>
+    <string name="dish_image">Dish Image</string>
+    <string name="add_photo">Add Photo</string>
+    <string name="no_dishes_added_yet">No dishes added yet !</string>
+    <string name="foodle">FOODLE</string>
+    <string name="dialog_title">Dialog Title</string>
+    <string name="foodle_2021">FOODLE © 2021</string>
+    <string name="tap_to_know_more">Tap to know more</string>
+    <string name="_15_20_mins">15-20 mins</string>
+    <string name="clock">clock</string>
+    <string name="chicken_pizza">Chicken Pizza</string>
+    <string name="food">food</string>
+    <string name="edit_dish">Edit dish</string>
+    <string name="delete_dish">Delete dish</string>
+    <string name="updateDIsh">UPDATE DISH</string>
+    <string name="filter">Filter</string>
+    <string name="select_item_to_filter">SELECT FILTER</string>
+    <string name="directions_to_cook">Directions To Cook</string>
+    <string name="tap_to_expand">Tap</string>
+    <string name="enable_permission_in_settings">Enable permission in settings</string>
+    <string name="mapKey">AIzaSyCXuazUmIQ5tueibG9B0i8IZL95H9EPfd0</string>
+    <string name="select_tags_to_view_dishes">Select tags to view dishes</string>
+    <string name="clcick">CLCICK</string>
+    <string name="pasta">Pasta</string>
+    <string name="enter_dish">Enter Dish</string>
+    <string name="search_dishes">Search Dishes !</string>
+    <string name="invalid_dish_name">Invalid dish name !</string>
+    <string name="issue_in_network">Issue in network !</string>
+    <string name="others">Others</string>
+    <string name="e">Tap to expand</string>
+
+    <string name="_68">68</string>
+    <string name="dir">Directions</string>
+    <string name="ing">Ingredients</string>
+    <string name="lbl_estimate_cooking_time"> The approx time required to cook the dish is %1$s minutes.</string>
+    <string name="directions">Directions</string>
+    <string name="_45_mins">45 mins</string>
+    <string name="score_of_91">Score of 91</string>
+    <string name="_113_likes">113 Likes</string>
+    <string name="notifications">Notifications</string>
+    <string name="notifs">Notifs</string>
+    <string name="share">share</string>
+    <string name="add_your_dishes_here">Add your dishes here !</string>
+    <string name="add_your_favorites_here">Add your favorites here !</string>
+
+
+</resources>

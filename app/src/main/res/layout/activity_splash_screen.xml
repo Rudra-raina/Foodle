@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#FDDA0D"
+    tools:context=".activities.SplashScreenActivity">
+
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="@dimen/_350sdp"
+        android:layout_height="@dimen/_350sdp"
+        android:src="@drawable/foodle"
+        android:layout_marginTop="@dimen/_130sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_170sdp"
+        android:background="#FDDA0D"
+        android:layout_marginTop="@dimen/_90sdp"
+        app:layout_constraintVertical_bias=".20"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/logo"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/animation"
+        android:layout_width="@dimen/_180sdp"
+        android:layout_height="@dimen/_180sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:lottie_loop="true"
+        android:layout_marginTop="@dimen/_120sdp"
+        app:layout_constraintVertical_bias=".5"
+        app:lottie_fileName="cookerthree.json"
+        app:lottie_autoPlay="true"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

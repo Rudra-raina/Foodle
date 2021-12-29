@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.example.foodle.fragments.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_navigation_home_to_dishDetailFragment"
+            app:destination="@id/dishDetailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_fav"
+        android:name="com.example.foodle.fragments.FavoriteFragment"
+        android:label="Favorites"
+        tools:layout="@layout/fragment_favorite" >
+        <action
+            android:id="@+id/action_navigation_fav_to_dishDetailFragment"
+            app:destination="@id/dishDetailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_search"
+        android:name="com.example.foodle.fragments.SearchFragment"
+        android:label="Search"
+        tools:layout="@layout/fragment_search" />
+
+    <fragment
+        android:id="@+id/navigation_nearby"
+        android:name="com.example.foodle.fragments.NearbyFragment"
+        android:label="Notifications"
+        tools:layout="@layout/fragment_nearby" />
+
+    <fragment
+        android:id="@+id/dishDetailFragment"
+        android:name="com.example.foodle.fragments.DishDetailFragment"
+        android:label="Details"
+        tools:layout="@layout/fragment_dish_detail">
+
+        <argument
+            android:name="dishDetailsArgument"
+            app:argType="com.example.foodle.database.DishEntity"/>
+
+    </fragment>
+</navigation>
