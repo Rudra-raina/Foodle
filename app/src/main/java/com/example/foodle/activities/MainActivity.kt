@@ -83,7 +83,7 @@ class MainActivity : AppCompatActivity() {
         .setRequiresBatteryNotLow(false)
         .build()
 
-    private fun createWorkRequest()= PeriodicWorkRequestBuilder<NotifyWorker>(15,TimeUnit.MINUTES)
+    private fun createWorkRequest()= PeriodicWorkRequestBuilder<NotifyWorker>(7,TimeUnit.DAYS)
         .setConstraints(createConstraints())
         .build()
 
