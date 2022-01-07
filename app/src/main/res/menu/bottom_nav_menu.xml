@@ -21,8 +21,8 @@
         android:title="@string/search" />
 
     <item
-        android:id="@+id/navigation_nearby"
+        android:id="@+id/navigation_notifs"
         android:icon="@drawable/notif"
-        android:title="@string/notifs"/>
+        android:title="Notifs"/>
 
 </menu>

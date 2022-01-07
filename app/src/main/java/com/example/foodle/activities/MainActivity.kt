@@ -5,7 +5,6 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
-import androidx.constraintlayout.widget.ConstraintSet
 import androidx.core.content.ContextCompat
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
@@ -38,7 +37,7 @@ class MainActivity : AppCompatActivity() {
         mNavController = findNavController(R.id.nav_host_fragment_activity_main)
         val appBarConfiguration = AppBarConfiguration(
             setOf(
-                R.id.navigation_home, R.id.navigation_fav, R.id.navigation_search,R.id.navigation_nearby
+                R.id.navigation_home, R.id.navigation_fav, R.id.navigation_search,R.id.navigation_notifs
             )
         )
         setupActionBarWithNavController(mNavController, appBarConfiguration)
@@ -54,7 +53,7 @@ class MainActivity : AppCompatActivity() {
 
         if(intent.hasExtra(Constants.NOTIFICATION_ID)){
             val notificationId=intent.getIntExtra(Constants.NOTIFICATION_ID,0)
-            mBinding.bottomNavView.selectedItemId=R.id.navigation_nearby
+            mBinding.bottomNavView.selectedItemId=R.id.navigation_notifs
         }
 
         Log.e("pop","onCreate")

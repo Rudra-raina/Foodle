@@ -20,6 +20,7 @@ import com.example.foodle.databinding.DishDetailDialogBinding
 import com.example.foodle.databinding.FragmentSearchBinding
 import com.example.foodle.networks.DishApiViewModel
 import com.example.foodle.networks.FilteredDishes
+import com.example.foodle.utils.Constants
 import java.util.*
 
 class SearchFragment : Fragment() {
@@ -68,7 +69,6 @@ class SearchFragment : Fragment() {
 
     private fun apiCall(filter:String){
         mDishApiViewModel.getSearchedDishesFromInternet(filter)
-//        dishViewModelObserver()
     }
 
     private fun dishViewModelObserver(){
@@ -120,10 +120,11 @@ class SearchFragment : Fragment() {
     private fun setUpUI(list : FilteredDishes.DishesFromAPI){
         mBinding!!.tvTitle.text=list.recipes[0].title
         Glide.with(requireActivity()).load(list.recipes[0].image).centerCrop().into(mBinding!!.ivDishImage)
-        mBinding!!.tvServing.text="Serving of ${list.recipes[0].servings}"
+        mBinding!!.tvServing.text="Serving - ${list.recipes[0].servings}"
         mBinding!!.tvLikes.text= "${list.recipes[0].aggregateLikes} likes"
+        mBinding!!.tvLikesRound.text= "${list.recipes[0].aggregateLikes} likes"
         mBinding!!.tvScore.text= "Score of ${list.recipes[0].spoonacularScore.toInt()}"
-        mBinding!!.tvCookingTime.text="${list.recipes[0].readyInMinutes} mins"
+        mBinding!!.tvCookingTime.text=resources.getString(R.string.lbl_estimate_cooking_time,list.recipes[0].readyInMinutes.toString())
 
         for(value in list.recipes[0].extendedIngredients){
             if(mIngredients.isEmpty()){
@@ -140,13 +141,8 @@ class SearchFragment : Fragment() {
             mDirections = Html.fromHtml(list.recipes[0].instructions).toString()
         }
 
-        mBinding!!.tvIngredients.setOnClickListener{
-            popUp("Ingredients")
-        }
-
-        mBinding!!.tvDirections.setOnClickListener{
-            popUp("Directions")
-        }
+        mBinding!!.tvIngredients.text=mIngredients
+        mBinding!!.tvCookingDirection.text=mDirections
 
         mBinding!!.llAddDish.setOnClickListener{
             val time = list.recipes[0].readyInMinutes
@@ -170,7 +166,7 @@ class SearchFragment : Fragment() {
 
             val randomDish = DishEntity(
                 list.recipes[0].image,
-                "Online",
+                Constants.online,
                 list.recipes[0].title,
                 "Others",
                 "Others",
@@ -190,20 +186,6 @@ class SearchFragment : Fragment() {
         }
     }
 
-    private fun popUp(title:String){
-        val dialog= Dialog(requireContext())
-        val binding = DishDetailDialogBinding.inflate(layoutInflater)
-        dialog.setContentView(binding.root)
-
-        binding.tvTitle.text=title
-        if(title=="Ingredients"){
-            binding.tvInfo.text=mIngredients
-        }else{
-            binding.tvInfo.text=mDirections
-        }
-
-        dialog.show()
-    }
     override fun onDestroyView() {
         super.onDestroyView()
         mBinding = null

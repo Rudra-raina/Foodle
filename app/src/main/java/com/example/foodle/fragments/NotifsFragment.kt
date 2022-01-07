@@ -1,6 +1,5 @@
 package com.example.foodle.fragments
 
-import android.app.Dialog
 import android.os.Build
 import android.os.Bundle
 import android.text.Html
@@ -18,21 +17,20 @@ import com.example.foodle.database.DishApplication
 import com.example.foodle.database.DishEntity
 import com.example.foodle.database.DishViewModel
 import com.example.foodle.database.DishViewModelFactory
-import com.example.foodle.databinding.FragmentNearbyBinding
-import com.example.foodle.databinding.InternetDishDesignBinding
+import com.example.foodle.databinding.FragmentNotifsBinding
 import com.example.foodle.networks.DishApiViewModel
 import com.example.foodle.networks.FilteredDishes
 import com.example.foodle.utils.Constants
 
 
-class NearbyFragment : Fragment() {
+class NotifsFragment : Fragment() {
 
-    private var mBinding : FragmentNearbyBinding? = null
+    private var mBinding : FragmentNotifsBinding? = null
 
     private lateinit var mRandomDishViewModel : DishApiViewModel
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
-        mBinding = FragmentNearbyBinding.inflate(inflater,container,false)
+        mBinding = FragmentNotifsBinding.inflate(inflater,container,false)
         return mBinding!!.root
     }
 
@@ -96,9 +94,9 @@ class NearbyFragment : Fragment() {
 
         mBinding!!.tvCookingTime.text=resources.getString(R.string.lbl_estimate_cooking_time,dish.recipes[0].readyInMinutes.toString())
 
-        mBinding!!.tvServing.text="Serving of ${dish.recipes[0].servings}"
+        mBinding!!.tvServing.text="Serving - ${dish.recipes[0].servings}"
         mBinding!!.tvScore.text= "Score of ${dish.recipes[0].spoonacularScore.toInt()}"
-        mBinding!!.tv.text="${dish.recipes[0].aggregateLikes} likes"
+        mBinding!!.tvLikesRound.text="${dish.recipes[0].aggregateLikes} likes"
 
 
 

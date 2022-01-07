@@ -32,10 +32,10 @@
         tools:layout="@layout/fragment_search" />
 
     <fragment
-        android:id="@+id/navigation_nearby"
-        android:name="com.example.foodle.fragments.NearbyFragment"
+        android:id="@+id/navigation_notifs"
+        android:name="com.example.foodle.fragments.NotifsFragment"
         android:label="Notifications"
-        tools:layout="@layout/fragment_nearby" />
+        tools:layout="@layout/fragment_notifs" />
 
     <fragment
         android:id="@+id/dishDetailFragment"

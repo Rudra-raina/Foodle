@@ -57,11 +57,12 @@
     <string name="_45_mins">45 mins</string>
     <string name="score_of_91">Score of 91</string>
     <string name="_113_likes">113 Likes</string>
-    <string name="notifications">Notifications</string>
+
     <string name="notifs">Notifs</string>
     <string name="share">share</string>
     <string name="add_your_dishes_here">Add your dishes here !</string>
     <string name="add_your_favorites_here">Add your favorites here !</string>
+    <string name="notifications">Notifications</string>
 
 
 </resources>
