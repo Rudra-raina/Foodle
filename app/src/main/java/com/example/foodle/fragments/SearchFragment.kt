@@ -1,6 +1,5 @@
 package com.example.foodle.fragments
 
-import android.app.Dialog
 import android.os.Build
 import android.os.Bundle
 import android.text.Html
@@ -16,7 +15,6 @@ import com.example.foodle.database.DishApplication
 import com.example.foodle.database.DishEntity
 import com.example.foodle.database.DishViewModel
 import com.example.foodle.database.DishViewModelFactory
-import com.example.foodle.databinding.DishDetailDialogBinding
 import com.example.foodle.databinding.FragmentSearchBinding
 import com.example.foodle.networks.DishApiViewModel
 import com.example.foodle.networks.FilteredDishes
@@ -72,7 +70,6 @@ class SearchFragment : Fragment() {
     }
 
     private fun dishViewModelObserver(){
-
         mDishApiViewModel.dishResponse.observe(viewLifecycleOwner,{
             if(it!=null){
                 val size = it.recipes.size
@@ -185,6 +182,7 @@ class SearchFragment : Fragment() {
             Toast.makeText(requireContext(), "Successfully saved", Toast.LENGTH_SHORT).show()
         }
     }
+
 
     override fun onDestroyView() {
         super.onDestroyView()

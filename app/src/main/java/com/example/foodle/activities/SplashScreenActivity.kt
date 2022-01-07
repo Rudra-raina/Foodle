@@ -9,6 +9,7 @@ import android.os.Looper
 import android.view.WindowInsets
 import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatDelegate
 import com.example.foodle.databinding.ActivitySplashScreenBinding
 
 @SuppressLint("CustomSplashScreen")
